@@ -6,7 +6,10 @@ phases:
       python: 3.8
     commands:
       - echo Installing dependencies...
+      - pip install --upgrade pip
       - pip install -r requirements.txt
+      - pip install pytest            # <- assure que pytest est installé
+      - mkdir -p reports             # <- crée le dossier pour les résultats de tests
 
   pre_build:
     commands:
